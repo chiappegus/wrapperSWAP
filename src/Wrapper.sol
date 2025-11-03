@@ -1,9 +1,23 @@
 // SPDX-License-Identifier: MIT
+//https://github.com/DigiCris/foundryEthKipu/blob/main/foundrySwap/src/Wrapper.sol
+
+// forge install Uniswap/v2-periphery
+//forge install OpenZeppelin/openzeppelin-contracts
+//forge remappings > remappings.txt
+//forge build
+//anvil 
+//cast wallet import thirdWallet --interactive 
+//cast wallet list
+
 pragma solidity ^0.8.20;
 
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+// import {IERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+// import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
 import {IUniswapV2Router02} from "v2-periphery/interfaces/IUniswapV2Router02.sol";
+// import {IUniswapV2Router02} from "../lib/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol";
+
  
 contract Wrapper {
     using SafeERC20 for IERC20;
